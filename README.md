@@ -28,7 +28,7 @@ print('string \n')
 
 * python은 indent가 scope를 결정하는 무근본 언어이므로 주의
 
-## 2주차 - ```input()``` 함수 활용
+## 2주차 - ```input()``` 함수 활용, data types, ASCII, 
 
 ### 2.1.  ```input()``` 함수
 
@@ -54,3 +54,75 @@ print('Hi' + name + '?')
 
 week2 폴더 내 ```nick_maker.py``` 참고
 
+### 2.4. Data types 
+
+* Text types: ```str```
+* Numeric types: ```int, float, complex```
+* Sequence types: ```list, tuple, range```
+* Set types: ```set, frozenset```
+* Boolean type: ```bool```
+* Binary types: ```bytes, bytearry, memorybiew```
+
+python은 자동으로 변수를 인식한다. 다만 필요에 따라 강제로 변환 가능하다. 
+
+### 2.5. 실습 - date types
+
+필요에 따라 강제 type 변환이 가능하다
+
+1. ```int``` 이용
+```python
+x = int("2019")
+y = int("2000")
+
+type(x-y)
+
+>>> <clsss 'int'>
+```
+"string"인데 ```int``` 안에 넣어서 강제로 자료형이 바뀜.
+
+```python
+x = "2019"
+y = "2000"
+int(x) - int(y)
+>>> 19
+
+type(x)
+>>> <clsss 'str'>
+```
+
+2. ```float``` 이용
+```python
+r = "5.5"
+pi = "3.14"
+
+float(r)*float(r)*float(pi)
+```
+
+"string"인데도 ```float```을 써서 강제로 실수형으로 변환함.
+
+### 2.6. ASCII(American Standard code for Information Interchange)
+
+* motivation: 컴퓨터에는 0, 1의 binary만 입력 가능하다. 숫자의 경우 진법 변환을 이용하지만, 글자의 경우는 어떻게 할까?
+
+* 글자를 숫자로 mapping 하는 규칙을 만들자
+
+* ASCII: 1Byte(128개 정보)를 이용해 mapping한다
+
+### 2.7. 실습 - ASCII in python
+
+* ```ord("string")``` : 해당 문자에 대응하는 ASCII를 반환한다
+* ```chr(number)``` : 해당 숫자에 대응하는 ASCII를 반환한다
+
+```python
+ord("a")
+>>> 97
+
+ord(65)
+>>> 'A'
+```
+
+* ```bin(number)``` : 10진수 숫자를 넣으면 대응하는 binary를 반환함
+```python
+bin(97)
+>>> '0b1100001'
+```
