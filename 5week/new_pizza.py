@@ -29,4 +29,4 @@ cheese = get_valid_input("치즈를 추가하시겠습니까? (y/n) \n", ["y", "
 # 가격 계산
 total_cost = calculate_cost(size, pepperoni, cheese)
 
-print(f"결제 금액은 {total_cost}원 입니다.")
+print(f"결제 금액은 {total_cost:,}원 입니다.")
