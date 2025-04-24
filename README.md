@@ -180,4 +180,131 @@ bin(97)
 * 또는 4주차 `bmi_calculator.py` 참고
 * 조건문을 이용
 
+## 5주차 - 조건문
+### 5.1. `is` 명령문
+True/False를 확인 가능한 조건에 대해 분기 실행.
+
+* 사용 방법
+```
+if {condotion or Bool type}:
+  code
+elif {condition or Bool type}:
+  code
+else:
+  code
+```
+주의사항: 들여쓰기로 scope 구분 필요.
+
+### 5.2. 실습 - 짝수 판별기
+
+대충 짝수 판별한다는 내용
+
+### 5.3. 실습 - 피자 주문 계산기
+
+대충 피자 주문한다는 내용
+
+## 6주차 - 난수(random)와 배열(array)
+### 6.1. `random()` 모튤 사용 
+python은 Merssene Twister 이용해 난수 형성. 
+
+```
+import random as rd
+
+rd.randint(a, b)
+```
+구간 [a, b]에서 정수 난수 생성함. 
+
+### 6.2. 실습 - 가위바위보
+6주차 코드 참고
+
+### 6.3. 배열(array)
+여러 값들을 하나의 변수로 묶은 것. []로 묶이는 list와 ()로 묶이는 tuple이 있다. 
+list는 원소 수정 가능하나, tuple은 원소 수정 불가능. sorting과 reverse도 불가능.
+tuple은 메모리 고정 할당되므로 불변성 유리.
+
+배열의 index는 0부터 시작.
+
+### 6.4. 배열 접근
+slicing, concatenation, repetition 가능함. 
+* slicing
+`list[start:end:step]`
+
+* concatenation:
+```
+a = (1, 2)
+b = (3, 4)
+c = a+b
+print(c) = (1, 2, 3, 4)
+```
+* repetiton
+배열 곱셈 된다는 말
+
+*원소 유무 검사
+```
+a = [1, 2, 3]
+1 in a
+```
+-> True/False 내뱉는 연산 해줌
+
+* 길이 정보
+`len(list/tuple)` 이용하면 문자열 길이 또는 배열 원소  뽑아줌
+
+* 원소 합
+  ```
+  a = [1, 2, 3]
+  sum(a)
+  ```
+* 원소 추가 - `append()` 함수
+ 리스트에 원소 추가해줌
+
+```
+a = [1, 2, 3]
+a.append(4)
+```
+`c = [1, 2, 3, 4]` 됨
+
+* 원소 삽입 - `insert()` 함수
+```
+a = [1, 2, 3]
+a.insert(1, 100)
+```
+`a = [1, 100, 2, 3]` 됨. 
+
+* 합치기 - `extend()` 또는 + 연산
+```
+a = [1, 2]
+a += [3, 4]
+print(a)
+```
+위 결과와
+```
+a = [1, 2]
+b = [3, 4]
+
+a.extend(b)
+
+print(a)
+```
+위 결과는 같다. 
+
+### 6.2. 다중 배열
+
+리스트의 원소로 리스트 가질 수 있다.
+
+```
+a = [[1, 2, 3],
+    [4, 5, 5],
+    [7, 8, 9]]
+```
+`a[row][column]` 으로 표현 가능.
+
+
+
+
+
+
+
+
+
+
 
